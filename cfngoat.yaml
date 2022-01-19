@@ -60,6 +60,7 @@ Resources:
         - Key: git_last_modified_by
           Value: nimrodkor@gmail.com
       UserData:
+        export AWS_ACCESS_KEY_ID=AKIAIOSFODNN7EXAMAAB
         Fn::Base64: |
           #!/bin/bash
           sudo yum -y update
@@ -732,7 +733,7 @@ Resources:
           <?php
           define('DB_SERVER', '${DefaultDB.Endpoint.Address}:${DefaultDB.Endpoint.Port}');
           define('DB_USERNAME', 'admin');
-          define('DB_PASSWORD', '${Password}');
+          define('DB_PASSWORD', 'Password');
           define('DB_DATABASE', '${DefaultDB}');
           ?>
           EnD
